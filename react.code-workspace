@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Java programs"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "web development"
+	}
+}
