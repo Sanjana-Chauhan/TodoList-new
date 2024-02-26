@@ -26,19 +26,17 @@
         </div>
         <div class="today">
             <h1>Today 5</h1> 
-            <input type="text" placeholder="+ Add new task" class="add-task">
+            <div class="input-task-container">
+
+                <input type="text" placeholder="+ Add new task" class="add-task">
+                <button onclick="addTodo()" class="button-with-icon"><img src="images/add-but.png" class=" but-inside-icon"></button>
+                
+            </div>
+            
             <div class="today-tasks-list">
                     <div class="task-box">
                         <input type="checkbox" class="task-status"> <span class="today-task">Generate ideas </span>
-                    </div>
-                    <div class="task-box">
-                        <input type="checkbox" class="task-status"> <span class="today-task">sanjana ji is good</span>
-                    </div>
-                    <div class="task-box">
-                        <input type="checkbox" class="task-status"> <span class="today-task">Generate ideas</span>
-                    </div>
-                    <div class="task-box">
-                        <input type="checkbox" class="task-status"> <span class="today-task">Generate ideas</span>
+                        <button class="button-with-icon" ><img src="images/trash.png" class="icon but-inside-icon"></button>
                     </div>
             </div>
         </div>
@@ -50,7 +48,19 @@
                 <div class="task-name task-desc">
                     <p>Description</p>
                 </div>
-                
+                <div class="subtasks-container">
+                    <h2>Subtasks :</h2>
+                    <div class="add-new-subtask">
+                        <input type="text" placeholder="+ Add New Subtask" class="add-task add-subtask">
+                    </div>  
+                    <div class="subtasks-list">
+                        <div class="sub-task"><input type="checkbox"> Subtask 1</div>
+                        <div class="sub-task"><input type="checkbox"> Subtask 1</div>
+                        <div class="sub-task"><input type="checkbox"> Subtask 1</div>
+                    </div>
+                    
+                    
+                </div>
                 <div class="task-buttons">
                     <button class="del-but">Delete Task</button>
                     <button class="sav-but del-but">Save Changes</button>
@@ -60,6 +70,6 @@
         </div>
        
     </div>
-<script src="new.js"></script>
+<script src="todo.js"></script>
 </body>
 </html>

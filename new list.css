@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+    outline: none;
+    transition: 0.1s;
 }
 .todo{
     display: flex;
@@ -13,8 +15,7 @@
 .nav{
     width :20%;
     padding:5px 3px;
-    border: 1px solid black;
-    border-radius: 10px;
+    position: relative;
     background-color: rgb(207, 210, 212);
 }
 h3{
@@ -23,10 +24,13 @@ h3{
 .list-one{
     list-style-type:none;
     padding: 8px 10px;
-    border-bottom:.5px solid black;
+    border-bottom:0.5px solid rgb(117, 114, 114);
 }
-.bottom{
-    width: 100%;
+.nav-two{
+    position: absolute;
+    bottom: 20px;
+    width: 95%;
+    margin: 0px 5px;
 }
 .list-one li{
     padding: 10px 4px;
@@ -44,10 +48,24 @@ h3{
     text-decoration: none;
     color :grey;
 }
-.list-one .icon{
+.icon{
     width: 25px;
     float: left;
     margin-right:10px ;
+}
+.button-with-icon{
+    background: none;
+    padding: 5px;
+    border: none;
+    height: 35px;
+    border-radius:40px;
+}
+.button-with-icon:hover{
+   cursor: pointer;
+   background-color: rgb(217, 214, 214);
+}
+.but-inside-icon{
+    width: 25px;  
 }
 .search{
     width: 100%;
@@ -60,33 +78,38 @@ h3{
 .today{
     width :40%;
     min-height: 80vh;
-    border: 1px solid black;
     padding: 5px 10px;
 }
 .today h1{
     font-size: 35px;
     margin-bottom: 20px ;
 }
-.today .add-task{
+.input-task-container{
+  display: flex;
+  align-items: flex-start;
+}
+ .add-task{
     font-size: 12px;
     height: 35px;
-    width: 100%;
+    width: 90%;
     padding: 2px 4px;
-    margin-bottom:20px ;
+    margin-bottom:20px;
 }
 .task-box{
-    padding:15px 5px 5px 5px;
+    display: grid;
+    grid-template-columns: 20px 415px 40px;
+    align-items: center;
+    height: 35px;
     font-size: 13px;
-    margin-bottom: 5px;
     border-bottom: 1px solid gray;
+    margin: 5px 0px;
 }
 .task-box:hover{
-    background-color: aliceblue;
+    background-color: rgb(220, 232, 243);
     cursor: pointer;
 }
 .task{
     width :30%;
-    border: 1px solid black;
     background-color:rgb(207, 210, 212) ;
     position: relative;
 }
@@ -113,15 +136,47 @@ h3{
 }
 .del-but{
     padding: 10px 25px;
-    border-radius: 5px;
-    border: 0.5px solid black;
-    background:none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    border: 1px solid rgb(163, 3, 3);
     font-weight:bold;
-
 }
 .sav-but{
-    border: 1px solid rgb(209, 194, 32);
-    background-color: rgb(235, 218, 35);
+    background-color: rgb(4, 176, 4);
+    border: 1px solid green;
+}
+.del-but:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgb(221, 31, 31);
+}
+.sav-but:hover{
+    box-shadow: 2px 2px 10px rgb(4, 176, 4);
+}
+.subtasks-container{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+}
+.add-subtask{
+   margin-bottom: 0px;
+}
+.sub-task{
+    display: flex;
+    align-items: center;
+    padding: 8px 5px;
+    font-size: 13px;
+}
+input[type=checkbox]{
+    margin-right: 5px;
+}
+.sub-task:hover{
+    background-color: rgb(169, 171, 173);
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5ms;
 }
 
 
