@@ -5,6 +5,7 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
     outline: none;
     transition: 0.1s;
+    text-decoration: none;
 }
 .todo{
     display: flex;
@@ -86,14 +87,20 @@ h3{
 }
 .input-task-container{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom:20px;
+  background-color: rgb(217, 214, 214);;
+  padding: 5px;
+  border-radius: 30px;
 }
  .add-task{
     font-size: 12px;
     height: 35px;
     width: 90%;
     padding: 2px 4px;
-    margin-bottom:20px;
+    border: none;
+    background: transparent;
 }
 .task-box{
     display: grid;
@@ -105,8 +112,8 @@ h3{
     margin: 5px 0px;
 }
 .task-box:hover{
-    background-color: rgb(220, 232, 243);
-    cursor: pointer;
+    /* background-color: rgb(220, 232, 243); */
+    /* cursor: pointer; */
 }
 .task{
     width :30%;
@@ -170,6 +177,7 @@ h3{
 }
 input[type=checkbox]{
     margin-right: 5px;
+    cursor: pointer;
 }
 .sub-task:hover{
     background-color: rgb(169, 171, 173);
