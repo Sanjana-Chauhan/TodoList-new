@@ -53,6 +53,8 @@ function taskDone(e){
   console.log(e.parentElement.querySelector("span").style.textDecoration);
     if(e.parentElement.querySelector("span").style.textDecoration="none"){
         e.parentElement.querySelector("span").style.textDecoration="line-through"; 
+        e.parentElement.style.backgroundColor="rgb(217, 214, 214)";
+        e.parentElement.querySelector("span").style.color="gray"; 
     }
 }
 
