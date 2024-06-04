@@ -45,10 +45,12 @@ function displayTodo(){
     }  
     box.innerHTML=newHtml;
 }
+
 function deleteTodo(i){
         todoList.splice(i,1);
         displayTodo();
 }
+
 function taskDone(e){
   console.log(e.parentElement.querySelector("span").style.textDecoration);
     if(e.parentElement.querySelector("span").style.textDecoration="none"){
@@ -56,5 +58,14 @@ function taskDone(e){
         e.parentElement.style.backgroundColor="rgb(217, 214, 214)";
         e.parentElement.querySelector("span").style.color="gray"; 
     }
+    else{
+        e.parentElement.querySelector("span").style.textDecoration="none";
+    }
+}
+function editTodo(){
+    let oldtask=document.querySelector(".today-task");
+    oldtask.addEventListener(click,(e)=>{
+        inputBox.value=oldtask.value();
+    });
 }
 
